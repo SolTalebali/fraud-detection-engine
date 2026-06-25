@@ -3,8 +3,6 @@ package io.github.soltalebali.frauddetection.model;
 import org.junit.jupiter.api.Test;
 import static org.hamcrest.Matchers.*;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -20,7 +18,6 @@ public class TransactionTest {
                new BigDecimal("250.50"), dateTime, "London");
 
        assertThat(transaction1, is(equalTo(transaction2)));
-       assertEquals(transaction1, transaction2);
    }
 
    @Test
@@ -34,7 +31,6 @@ public class TransactionTest {
               new BigDecimal("250.50"), dateTime, "Birmingham");
 
       assertThat(transaction1,not(equalTo(transaction2)));
-      assertNotEquals(transaction1, transaction2);
    }
 
    @Test
